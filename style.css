@@ -1,7 +1,25 @@
+:root {
+   --innerWidth: 750px;
+   --innerHeight: -250px;
+   --widthBox: 200px;
+   --heightBox: 125px;
+   --widthHat: 187.5px;
+   --heightHat: 287.5px;
+}
+
 html, body {
    width: 100%;
    height: 100%;
    margin: 0;
+}
+
+#box {
+   position: absolute;
+   top: 0;
+   left: 0;
+   z-index: 1;
+   width: 100%;
+   height: 90%;
    overflow: hidden;
 }
 
@@ -9,12 +27,11 @@ main {
    width: 100%;
    height: 100%;
    background: rgb(190, 218, 250);
-   /* display: flex;
-   justify-content: center;
-   align-items: center; */
 }
 
 main .display {
+   position: relative;
+   z-index: 2;
    width: 100%;
    height: 90%;
    display: flex;
@@ -25,41 +42,115 @@ main .display {
 }
 
 main .display button {
+   position: relative;
+   z-index: 2;
    padding: 10px;
    background: rgb(255, 61, 84);
    color: #fff;
    border: none;
    border-radius: 10px;
-   font-size: 1.5vw;
+   font-size: 2vw;
    font-weight: bold;
 }
 
-main .futter {
+.giftiks img{
+   width: 250px;
+   height: 250px;
+   object-fit: cover;
+   border-radius: 15px;
+   animation: giftiks;
+   animation-duration: 1.5s;
+   animation-timing-function: ease-out;
+   animation-iteration-count: 1;
+   animation-fill-mode: both;
+   animation-delay: 1.5s;
+}
+
+.gift .box{
+   position: absolute;
+   right: var(--widthBox);
+   bottom: var(--heightBox);
+   z-index: 3;
+}
+
+.gift .hat {
+   position: absolute;
+   right: var(--widthHat);
+   bottom: var(--heightHat);
+   z-index: 4;
+   background: rgb(190, 218, 250);
+}
+
+.gift_active .box{
+   position: absolute;
+   right: var(--widthBox);
+   bottom: var(--heightBox);
+   z-index: 3;
+   animation: gift;
+   animation-duration: 1.5s;
+   animation-timing-function: ease-out;
+   animation-iteration-count: 1;
+   animation-fill-mode: both;
+}
+
+.gift_active .hat {
+   position: absolute;
+   right: var(--widthHat);
+   bottom: var(--heightHat);
+   z-index: 4;
+   background: rgb(190, 218, 250);
+   animation: giftsHat;
+   animation-duration: 1.5s;
+   animation-timing-function: ease-out;
+   animation-iteration-count: 1;
+   animation-fill-mode: both;
+}
+
+.futter {
+   position: relative;
+   z-index: 2;
    width: 100%;
-   height: 10%;
+   height: 20%;
    display: flex;
    justify-content: center;
    align-items: center;
    background-color: #fff;
    clip-path: polygon(0% 20.25%, 21.1% 10.87%, 42.19% 20.25%, 74.19% 10.87%, 100% 18.38%, 100% 100%, 0% 100%);
+   transform: translateY(-50px);
 }
 
-@keyframes snowf {
-   0% {
-      top: -15px;
-      left: var(--animation-snowflake);
-   }
-   100% {
-      top: 2500px;
-      left: var(--animation-snowflake);
-   }
+footer {
+   position: relative;
+   z-index: 3;
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
+
+.foot_info p{
+   font-size: 1.25vw;
+   color: rgb(125, 125, 125);
+}
+
+.foot_info p a{
+   text-decoration: none;
+   font-size: 1.25vw;
+   color: rgb(80, 80, 80);
+}
+
+.foot_info p a:hover{
+   color: rgb(68, 155, 255);
+}
+
 .snowflake {
    --animation-snowflake: 25px;
    --animation-delay: 0s;
    --snowflake-size: 35px;
    --animation-duration: 5s;
    position: absolute;
+   top: -35px;
+   z-index: 5;
    background: #fff;
    width: var(--snowflake-size);
    height: var(--snowflake-size);
@@ -70,4 +161,106 @@ main .futter {
    animation-iteration-count: infinite;
    animation-fill-mode: forwards;
    animation-delay: var(--animation-delay);
+}
+
+@keyframes snowf {
+   0% {
+      top: -150px;
+      left: var(--animation-snowflake);
+   }
+   100% {
+      top: 2500px;
+      left: var(--animation-snowflake);
+   }
+}
+
+@keyframes giftiks {
+   0% {
+      opacity: 0;
+      transform: translate(var(--innerWidth), var(--innerHeight));
+      width: 0;
+      height: 0;
+   }
+   50% {
+      width: 100px;
+      height: 100px;
+      opacity: 1;
+   }
+   100% {
+      transform: translate(0, 0);
+      width: 250px;
+      height: 250px;
+   }
+}
+
+@keyframes gift {
+   0% {
+      transform: rotate(0deg);
+   }
+   12.5% {
+      transform: rotate(5deg);
+   }
+   25% {
+      transform: rotate(-5deg);
+   }
+   37.5% {
+      transform: rotate(5deg);
+   }
+   50% {
+      transform: rotate(-5deg);
+   }
+   62.5% {
+      transform: rotate(5deg);
+   }
+   75% {
+      transform: rotate(-5deg);
+   }
+   87.5% {
+      transform: rotate(5deg);
+   }
+   100% {
+      transform: rotate(0deg);
+   }
+}
+
+@keyframes giftsHat {
+   0% {
+      transform: rotate(0deg);
+   }
+   12.5% {
+      transform: rotate(5deg) translateX(8px);
+   }
+   16.5% {
+      transform: rotate(7deg);
+   }
+   25% {
+      transform: rotate(-5deg) translateX(-8px);
+   }
+   37.5% {
+      transform: rotate(5deg) translateX(8px);
+   }
+   42.5% {
+      transform: rotate(7deg);
+   }
+   50% {
+      transform: rotate(-5deg) translateX(-8px);
+   }
+   62.5% {
+      transform: rotate(5deg) translateX(8px);
+   }
+   66.5% {
+      transform: rotate(7deg);
+   }
+   75% {
+      transform: rotate(-5deg) translateX(-8px);
+   }
+   80% {
+      transform: rotate(-7deg);
+   }
+   87.5% {
+      transform: rotate(5deg) translateX(8px);
+   }
+   100% {
+      transform: rotate(70deg) translate(125px, -100px);
+   }
 }

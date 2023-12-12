@@ -1,18 +1,28 @@
 <!DOCTYPE html>
 <html lang="ru" class="root">
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Крестики-нолики</title>
-   <link rel="stylesheet" href="./style.css">
-   <script defer src="./game.js"></script>
-</head>
-<body>
-   <main id="display">
-      <div class="display">
-         <button type="btn" id="snow">Snow</button>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Пiдарунок</title>
+      <link rel="stylesheet" href="./style.css">
+      <script defer src="./game.js"></script>
+   </head>
+   <body>
+      <main id="display">
+         <div id="box"></div>
+         <div class="display">
+            <button type="btn" id="snow">Забрать подарок</button>
+         </div>
+         <div class="gift">
+            <canvas width="225" height="100" class="hat"></canvas>
+            <canvas width="200px" height="200px" class="box"></canvas>
+         </div>
+         <div class="futter"></div>
+      </main>
+   </body>
+   <footer>
+      <div class="foot_info">
+         <p>Код снегопада на JavaScript можно забрать на моём <a href="https://github.com/AllexLeach/snow" target="_blank">GitHub</a></p>
       </div>
-      <div class="futter"></div>
-   </main>
-</body>
+   </footer>
 </html>
