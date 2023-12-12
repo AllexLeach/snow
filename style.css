@@ -39,7 +39,7 @@ main .futter {
       left: var(--animation-snowflake);
    }
    100% {
-      top: 1500px;
+      top: 2500px;
       left: var(--animation-snowflake);
    }
 }
