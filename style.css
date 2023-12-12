@@ -21,6 +21,11 @@ main .display {
    justify-content: center;
    align-items: center;
    flex-direction: column;
+   padding: 10px;
+   background: rgb(255, 61, 84);
+   color: #fff;
+   border: none;
+   border-radius: 5px;
 }
 
 main .futter {
