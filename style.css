@@ -21,6 +21,9 @@ main .display {
    justify-content: center;
    align-items: center;
    flex-direction: column;
+}
+
+main .display button {
    padding: 10px;
    background: rgb(255, 61, 84);
    color: #fff;
