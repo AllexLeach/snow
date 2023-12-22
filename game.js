@@ -7,6 +7,14 @@ let counter = snow();
 
 const ctxBox = box.getContext("2d");
 const ctxHat = hat.getContext("2d");
+const src = {
+   1: "https://images.app.goo.gl/tN5zrC2zaRtUDsjRA", 
+   2: "https://images.app.goo.gl/zawXCCWiLxWAdmqf9", 
+   3: "https://images.app.goo.gl/unsTQf8tiF58YdLE8", 
+   4: "https://images.app.goo.gl/HTZWzsoyac28PMT47", 
+   5: "https://images.app.goo.gl/6S9mhHtV6cM1X32S6", 
+   6: "http://pm1.aminoapps.com/8034/1559aadd1667ce6a729452f24437e0690b2ba862r1-2048-2048v2_uhq.jpg"
+};
 
 function bows() {
    ctxHat.beginPath();
@@ -88,7 +96,7 @@ for(let a = 0; a < counter; ++a) {
 };
 
 document.getElementById('snow').onclick = function () {
-   giftBox.innerHTML = '<div class="giftiks"><img src="http://pm1.aminoapps.com/8034/1559aadd1667ce6a729452f24437e0690b2ba862r1-2048-2048v2_uhq.jpg"></div>';
+   giftBox.innerHTML = `<div class="giftiks"><img src="${src[getRandom(1,6)]}"></div>`;
    gift.className = 'gift_active';
    document.documentElement.style.setProperty('--innerWidth', `${window.innerWidth/2-150}px`);
    document.documentElement.style.setProperty('--innerHeight', `${window.innerHeight/2-150}px`);
