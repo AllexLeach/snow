@@ -8,11 +8,11 @@ let counter = snow();
 const ctxBox = box.getContext("2d");
 const ctxHat = hat.getContext("2d");
 const src = {
-   1: "https://images.app.goo.gl/tN5zrC2zaRtUDsjRA", 
-   2: "https://images.app.goo.gl/zawXCCWiLxWAdmqf9", 
-   3: "https://images.app.goo.gl/unsTQf8tiF58YdLE8", 
-   4: "https://images.app.goo.gl/HTZWzsoyac28PMT47", 
-   5: "https://images.app.goo.gl/6S9mhHtV6cM1X32S6", 
+   1: "https://sun9-26.userapi.com/impg/IREIOev2wxpw0rr0ByU8xI_ctn99yGBPE49Aow/y_sFgok4AHw.jpg?size=1280x866&quality=95&sign=2a0c23ed73cc7c0e3561e0c78f244b3c&c_uniq_tag=KT6KInpgeXSLqOR-pwJPxucBcEpNA5GG_RzHAVuKgMQ&type=album", 
+   2: "https://i.ytimg.com/vi/t9BMHH0UTyw/maxresdefault.jpg", 
+   3: "https://www.meme-arsenal.com/memes/2c0696d814dc77af953a9c908d7543fd.jpg", 
+   4: "https://sun9-63.userapi.com/impg/ktm9PHOPbPFszjdLwGVe36KWwFehCoUozt8IYQ/J1W13I2x_fg.jpg?size=1049x1071&quality=95&sign=00c8bdea6d4f8759602d9fd5a5aa89dd&c_uniq_tag=S47Sxo0aDT5yPUpIUwv7F_HdfZsvhawlSQ8VcBqRtQw&type=album", 
+   5: "https://i.pinimg.com/736x/ab/23/be/ab23be11783914dc875c67d6fd3fd4c3.jpg", 
    6: "http://pm1.aminoapps.com/8034/1559aadd1667ce6a729452f24437e0690b2ba862r1-2048-2048v2_uhq.jpg"
 };
 
