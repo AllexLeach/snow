@@ -143,6 +143,57 @@ footer {
    color: rgb(68, 155, 255);
 }
 
+.christmas_tree {
+   z-index: 5;
+   position: absolute;
+   left: 500px;
+   bottom: 500px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   /* width: 150px; */
+   /* height: 150px; */
+}
+
+.tree_1, .tree_2, .tree_3{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   width: 250px;
+   height: 100px;
+   background: rgb(4, 122, 0);
+   clip-path: polygon(25% 0%, 0% 100%, 100% 100%, 75% 0%);
+}
+
+.tree_2 {
+   width: 200px;
+   height: 75px;
+}
+
+.tree_1 {
+   width: 150px;
+   clip-path: polygon(50% 0%, 0% 100%, 100% 100%, 50% 0%);
+}
+
+.garland_1, .garland_2, .garland_3 {
+   width: 100%;
+   height: 20px;
+   /* clip-path: path('M 0 20 L 0,75 A 5,5 0,0,1 150,75 L 200 200 z'); */
+   background: rgb(255, 0, 0);
+   transform: rotate(25deg) translate(40px, 25px);
+}
+
+.garland_2 {
+   height: 15px;
+   transform: rotate(-25deg) translate(-25px, 40px);
+}
+
+.bot {
+   width: 50px;
+   height: 50px;
+   background: rgb(63, 25, 25);
+}
+
 .snowflake {
    --animation-snowflake: 25px;
    --animation-delay: 0s;

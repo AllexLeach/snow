@@ -3,10 +3,14 @@ const giftBox = document.querySelector('.display');
 const gift = document.querySelector('.gift');
 const box = document.querySelector('.box');
 const hat = document.querySelector('.hat');
+const christmasTree = document.querySelector('.christmas_tree');
 let counter = snow();
 
 const ctxBox = box.getContext("2d");
 const ctxHat = hat.getContext("2d");
+
+// function randerTree () {
+// };
 
 function bows() {
    ctxHat.beginPath();
