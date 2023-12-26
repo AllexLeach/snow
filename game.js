@@ -100,7 +100,7 @@ for(let a = 0; a < counter; ++a) {
 };
 
 document.getElementById('snow').onclick = function () {
-   giftBox.innerHTML = `<div class="giftiks"><img src="${src[getRandom(1,6)]}"></div>`;
+   giftBox.innerHTML = `<div class="giftiks"><img src="${src[getRandom(1,5)]}"></div>`;
    gift.className = 'gift_active';
    document.documentElement.style.setProperty('--innerWidth', `${window.innerWidth/2-150}px`);
    document.documentElement.style.setProperty('--innerHeight', `${window.innerHeight/2-150}px`);
